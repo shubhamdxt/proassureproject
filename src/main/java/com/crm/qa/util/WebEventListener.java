@@ -20,7 +20,10 @@ import org.openqa.selenium.support.events.WebDriverEventListener;
 
 import com.crm.qa.base.TestBase;
 
+
 public class WebEventListener extends TestBase implements WebDriverEventListener {
+	
+	
 
 	public void beforeNavigateTo(String url, WebDriver driver) {
 		System.out.println("Before navigating to: '" + url + "'");
@@ -86,6 +89,7 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 	}
 
 	public void afterScript(String script, WebDriver driver) {
+		
 	}
 
 	public void beforeAlertAccept(WebDriver driver) {

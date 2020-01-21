@@ -1,5 +1,5 @@
 /*
- * @autor : Naveen Khunteta
+ * @autor : shubham dixit
  * 
  */
 package com.qa.ExtentReportListener;
@@ -23,10 +23,12 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class ExtentReporterNG implements IReporter {
+	
 	private ExtentReports extent;
 
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,
 			String outputDirectory) {
+		extent=new ExtentReports("G:/New folder/UtailerProject/Reports.html");
 		extent = new ExtentReports(outputDirectory + File.separator
 				+ "Extent.html", true);
 
@@ -50,6 +52,7 @@ public class ExtentReporterNG implements IReporter {
 		ExtentTest test;
 
 		if (tests.size() > 0) {
+			
 			for (ITestResult result : tests.getAllResults()) {
 				test = extent.startTest(result.getMethod().getMethodName());
 
